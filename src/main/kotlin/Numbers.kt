@@ -31,10 +31,13 @@ class Numbers {
         fun printDouble(d: Double) { print(d) }
 
         val i = 1
+        print(util.typeOf(i))
         val d = 1.0
+        println(util.typeOf(d))
         val f = 1.0f
+        println(util.typeOf(f))
 
-        println(d)
+        printDouble(d)
         //    printDouble(i) // Error: Type mismatch
         //    printDouble(f) // Error: Type mismatch
     }
@@ -57,7 +60,7 @@ class Numbers {
         val bytes = 0b11010010_01101001_10010100_10010010
 
         // On JVM you have nullable number reference like Integer, Double
-        val a: Int = 9
+        val a= 9
         println(oneMillion)
         println(creditCardNumber)
         println(socialSecurityNumber)
@@ -73,7 +76,7 @@ class Numbers {
         val a = 3.14
         println(a.toInt())
         println(a.toLong())
-        val b: Int = 3
+        val b = 3
         println(b.toFloat())
         println(b.toDouble())
     }
