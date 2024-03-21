@@ -19,6 +19,7 @@ fun main() {
     boolean.latestBoolean()
 
     string.character()
+    string.methods()
     string.literals()
     string.formatting()
 
