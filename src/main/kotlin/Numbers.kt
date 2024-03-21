@@ -106,4 +106,29 @@ class Numbers {
         val x = (1 shl 2) and 0x000FF000
         println(x)
     }
+
+    fun uSignedIntegers() {
+        println("===U Signed Integers===")
+        /*
+        unsigned byte limits - 255
+        unsigned short limits - 65,535
+        unsigned int limits - 2^32 - 1
+        unsigned long limits - 2^64 - 1
+         */
+        val oneUByte: UByte = 1u  // UByte, expected type provided
+        val oneUShort: UShort = 1u // UShort, expected type provided
+        val oneULong: ULong = 1u  // ULong, expected type provided
+
+        val oneUInt = 42u // UInt: no expected type provided, constant fits in UInt
+        val a2 = 0xFFFF_FFFF_FFFFu // ULong: no expected type provided, constant doesn't fit in UInt
+
+        //UL or uL will explicitly mark the number as unsigned long
+        val a3 = 1uL
+        println("value of oneUByte is $oneUByte and its type is ${util.typeOf(oneUByte)}")
+        println("value of oneUShort is $oneUShort and its type is ${util.typeOf(oneUShort)}")
+        println("value of oneUInt is $oneUInt and its type is ${util.typeOf(oneUInt)}")
+        println("value of oneULong is $oneULong and its type is ${util.typeOf(oneULong)}")
+        println("value of a3 is $a3 and its type is ${util.typeOf(a3)}")
+        println("$a2 is not explicitly assigned to a type as type is not provided and it is of ${util.typeOf(a2)}")
+    }
 }

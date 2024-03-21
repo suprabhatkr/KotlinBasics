@@ -1,5 +1,5 @@
 class Utilities {
-    fun typeOf(element: Any): String {
+    fun typeOf(element: Any?): String {
         return when (element) {
             is String -> "String"
             is Int -> "Int"
@@ -13,9 +13,11 @@ class Utilities {
             is Map<*, *> -> "Map"
             is Set<*> -> "Set"
             else -> {
-                if (element.javaClass.isArray) {
+                if (element != null && element.javaClass.isArray) {
                     val componentType = element.javaClass.componentType
                     "Array<${componentType.simpleName}>"
+                } else if (element == null) {
+                    "NULL"
                 } else {
                     element.javaClass.simpleName
                 }
