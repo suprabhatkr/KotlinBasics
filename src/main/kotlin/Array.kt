@@ -21,13 +21,13 @@ class ArrayClass {
         emptyArray += "first"
         println(emptyArray.joinToString())
 
-        val initArray = Array<Int>(3) {0}
+        val initArray = Array(3) {0}
         println(initArray.joinToString())
 
-        val squareArray = Array<Int>(5) { i -> i*i}
+        val squareArray = Array(5) { i -> i*i}
         println(squareArray.joinToString())
 
-        val nestedArray = Array(2) {Array<Int> (3) {0} }
+        val nestedArray = Array(2) {Array (3) {0} }
         for (array in nestedArray) {
             println(array.joinToString())
         }
