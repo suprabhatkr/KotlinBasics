@@ -67,4 +67,37 @@ class ArrayClass {
         val arrMap = arrayOf("one" to 1, "two" to 2, "three" to 3)
         println(arrMap.toMap())
     }
+
+    fun mutableList() {
+        println("===Mutable List===")
+        val lst = mutableListOf("RAM", "Graphics", "Monitor", "CPU")
+        println(lst)
+
+        lst.add("SSD")
+        lst.remove("Graphics")
+        lst.add("GPU")
+        println(lst)
+
+        lst.removeAt(1)
+        lst.add("OLED Display")
+        println(lst)
+
+        lst.removeFirst()
+        lst.add(2, "RAM")
+        println(lst)
+
+        println("Index 2 for lst is = " + lst[2])
+        lst[2] = "16 GB RAM"
+        println(lst)
+
+        lst[lst.lastIndex] = "LED Display"
+        println(lst)
+
+        println("Does 16 GB RAM exists = " + lst.contains("16 GB RAM"))
+
+        for(item in lst) {
+            print("$item ")
+        }
+        println("")
+    }
 }

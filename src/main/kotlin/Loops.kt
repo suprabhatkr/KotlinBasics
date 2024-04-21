@@ -17,6 +17,12 @@ class Loops {
         }
         print("\n")
 
+        println("until")
+        for (i in 0 until n) {
+            print(greetings[i] + "\t")
+        }
+        print("\n")
+
         for (i in greetings.indices) {
             print(greetings[i] + "\t")
         }

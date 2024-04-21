@@ -32,6 +32,7 @@ fun main() {
     array.accessing()
     array.methods()
     array.convertArray()
+    array.mutableList()
 
     conditions.ifElse()
     conditions.whenCondition()
