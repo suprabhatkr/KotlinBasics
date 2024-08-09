@@ -23,6 +23,7 @@ class Dog {
     }
 }
 
+// Passing variable which is not class attribute
 class BigDog(name: String) {
     init {
         bark(name)
@@ -33,6 +34,7 @@ class BigDog(name: String) {
     }
 }
 
+// Passing a variable which is class attribute
 class CuteDog(val name: String, val breed: String, val age: Int = 0) {
     init {
         bark()

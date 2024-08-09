@@ -1,5 +1,6 @@
 package bankaccount
 
+// we can declare a class attribute both as parameter or in the parentheses of class
 class BankAccount(
     val name: String,
     private var balance: Int
